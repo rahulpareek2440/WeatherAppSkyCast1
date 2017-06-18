@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html ng-app="skycast">
+  <head>
+    <title>SkyCast</title>
+
+    <!-- Viewport mobile tag for sensible mobile support -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+
+    <link rel="stylesheet" href="/styles/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="/styles/bootstrap/jumbotron.css">
+    <link rel="stylesheet" href="/styles/bootstrap/loading-bar.css">
+    <link rel="stylesheet" href="/styles/bootstrap/ui-bootstrap-csp.css">
+    <link rel="stylesheet" href="/styles/importer.css">
+    <!--STYLES END-->
+  </head>
+
+  <body>
+    <%- body %>
+    <!--TEMPLATES-->
+    <script type="text/javascript" src="/jst.js"></script>
+    <!--TEMPLATES END-->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDWAJb8LEOTziGfHLbI4z5IQdIYt1-BnTM&libraries=places"></script>
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+
+    <!--SCRIPTS-->
+    <script src="/js/dependencies/sails.io.js"></script>
+    <script src="/js/bootstrap/jquery.min.js"></script>
+    <script src="/js/bootstrap/bootstrap.js"></script>
+    <script src="/js/dependencies/angular.js"></script>
+    <script src="/js/dependencies/angular-ui-router.js"></script>
+    <script src="/js/dependencies/ui-bootstrap.js"></script>
+    <script src="/js/dependencies/ngStorage.js"></script>
+    <script src="/js/dependencies/loading-bar.js"></script>
+    <script src="/js/dependencies/ui-bootstrap-tpls.js"></script>
+    <script src="/js/app/skycast.js"></script>
+    <script src="/js/app/controllers/HomeController.js"></script>
+    <script src="/js/app/controllers/LoginController.js"></script>
+    <script src="/js/app/controllers/MenuController.js"></script>
+    <script src="/js/app/controllers/SignupController.js"></script>
+    <script src="/js/app/sevices/UserSevice.js"></script>
+    <!--SCRIPTS END-->
+  </body>
+</html>

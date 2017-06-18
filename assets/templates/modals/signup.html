@@ -1,0 +1,35 @@
+<form style="margin: 20px" class="form-horizontal" novalidate ng-submit="signup(signupForm.$valid)" name="signupForm">
+
+	<div style="margin-bottom: 25px" class="text-right spacer-sm">
+		<span style="cursor: pointer; cursor: hand;" ng-click="cancel()" id="modalClose"><i class="glyphicon glyphicon-remove"></i> Close</span>
+	</div>
+
+    <ul style="margin-bottom: 25px" class="alert alert-danger" ng-show="errs">
+        <li ng-repeat="err in errs">{{err}}</li>
+    </ul>
+
+    <p class="text-danger" ng-show="signupForm.username.$invalid && signupForm.username.$dirty" class="help-block">Username is required</p>
+  	<div style="margin-bottom: 25px" class="input-group">
+    	<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+        <input id="login-username" type="text" class="form-control" name="username" value="" placeholder="username" required ng-model="user.username">                                        
+    </div>
+
+    <p class="text-danger" ng-show="signupForm.password.$invalid && signupForm.password.$dirty" class="help-block">Password is required</p>
+  	<div style="margin-bottom: 25px" class="input-group">
+    	<span class="input-group-addon"><i class="glyphicon glyphicon-eye-close"></i></span>
+        <input id="login-password" type="password" class="form-control" name="password" placeholder="password" required ng-model="user.password">                                        
+    </div>
+
+    <p class="text-danger" ng-show="user.confirmPassword != user.password" class="help-block">Confirm password doesn't match</p>
+    <div style="margin-bottom: 25px" class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-eye-close"></i></span>
+        <input id="login-password" type="password" class="form-control" name="confirmPassword" placeholder="confirm password" required ng-model="user.confirmPassword">
+    </div>
+
+    <div style="text-align:center">
+        <span class="group-btn">     
+            <button type="submit" ng-disabled="signupForm.$invalid || user.password != user.confirmPassword" class="btn btn-primary btn-md">signup</button>
+        </span>
+    </div>
+
+</form>

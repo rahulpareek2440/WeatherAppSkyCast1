@@ -1,0 +1,54 @@
+
+<div class="jumbotron" >
+  <div class="container">
+    <h1>Welcome to my weather forecasting application SKYCAST</h1>
+
+    <div class="col-md-8">
+    	<div class="table-responsive">
+    		<table class="table table-borderless">
+    			<tr>
+    				<td id="d3_chart"></td>
+    			</tr>
+    		</table>
+    	</div>
+    </div>
+    <div class="col-md-4" ng-show="chart">
+    	<div class="media">
+		  <div class="media-left media-top">
+		    <a href="#">
+		      <div style="width:25px;height:15px;display:block; background-color:green"></div>
+		    </a>
+		  </div>
+		  <div class="media-body">
+		    <h5 class="media-heading">Max Temperature</h5>
+		  </div>
+		</div>
+		<div class="media">
+		  <div class="media-left media-top">
+		    <a href="#">
+		      <div style="width:25px;height:15px;display:block; background-color:yellow"></div>
+		    </a>
+		  </div>
+		  <div class="media-body">
+		    <h5 class="media-heading">Min Temperature</h5>
+		  </div>
+		</div>
+    </div>
+
+  </div>
+</div>
+
+<div class="container" ng-show="user">
+	<div class="panel panel-info">
+	  <div class="panel-heading">Past Search</div>
+	  <div class="panel-body">
+	    <div class="row">
+            <div class="row-sm-3" ng-repeat="history in user.searches" style="margin-bottom: 5px">
+                - <a href="#" ng-click="search(history)"><small ng-bind="history"></small></a>
+
+            </div>
+        </div>
+	  </div>
+	</div>
+</div>
+
